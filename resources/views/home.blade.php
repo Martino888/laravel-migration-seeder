@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/app.css">
     <title>home</title>
 </head>
 <body>
@@ -16,19 +17,33 @@
             <li>Orario di arrivo</li>
             <li>Codice treno</li>
             <li>Numero carrozza</li>
+            <li>Binario</li>
         </ul>
 
         @foreach ($listaTreni as $train)
         <div>
-            {{ $train->Azienda }}
-            {{ $train->Stazione_di_partenza }}
-            {{ $train->Stazione_di_arrivo }}
-            {{ $train->Orario_di_partenza }}
-            {{ $train->Orario_di_arrivo }}
-            {{ $train->Codice_treno }}
-            {{ $train->Numero_carrozza }}
+            <h3>{{ $train->Azienda }}</h3>
+        </div>
+        <div>
+            <b>Da</b>   {{ $train->Stazione_Di_Partenza }} --- <b>Verso</b>  {{ $train->Stazione_Di_Arrivo }}
+        </div>
+        <div>
+            <b>Partenza</b>  {{ $train->Orario_Di_Partenza }} --- <b>Arrivo</b>  {{ $train->Orario_Di_Arrivo }}
+        </div>
+
+        <div>
+            <b>Numero: </b> {{ $train->Codice_Treno }}
+        </div>
+        <div>
+            <b>Carrozza: </b> {{ $train->Numero_Carrozza }}
+        </div>
+
+        <div>
+            <b>Binario: </b> {{ $train->Binario}}
         </div>
         @endforeach
+
+        @dd($listaTreni)
     </div>
 </body>
 </html>
