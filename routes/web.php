@@ -13,4 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'FakeController@index')->name('home');
+Route::get('/', 'TrainController@index')->name('home');
