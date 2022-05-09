@@ -13,3 +13,5 @@ class TrainController extends Controller
         return view('home', compact('listaTreni'));
     }
 }
+
+

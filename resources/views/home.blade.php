@@ -41,9 +41,12 @@
         <div>
             <b>Binario: </b> {{ $train->Binario}}
         </div>
+
         @endforeach
 
-        @dd($listaTreni)
+{{-- {{ $train->links() }} --}}
+
+        {{-- @dd($listaTreni) --}}
     </div>
 </body>
 </html>
